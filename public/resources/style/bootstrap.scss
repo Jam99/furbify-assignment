@@ -1,0 +1,33 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap');
+
+@import "variables";
+
+/* For Firefox */
+/* Set the width of the scrollbar */
+@supports not selector(::-webkit-scrollbar) {
+    * {
+        //scrollbar-width: thin;
+        scrollbar-color: $dark $light;
+    }
+}
+
+/* For webkit browsers (Chrome, Safari) */
+/* Set the width of the scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Set the background of the scrollbar track */
+::-webkit-scrollbar-track {
+    background: $light;
+    border-radius: .25rem;
+}
+
+/* Set the color of the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: $dark;
+    border-radius: .25rem;
+}
+
+@import "main";
