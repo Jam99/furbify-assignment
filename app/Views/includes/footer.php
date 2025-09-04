@@ -1,5 +1,5 @@
-        <footer class="text-center bg-dark py-2 text-light">
-            <p class="mt-3"><?= lang("Main.all_rights_reserved") ?> &copy; <?= date("Y") ?> - Máté Jámbor - <a href="https://fullstackvoid.com/" class="link link-light">fullstackvoid.com</a></p>
+        <footer class="text-center bg-dark pb-2 pt-5 text-light">
+            <p class="mt-3"><?= lang("Main.all_rights_reserved") ?> &copy; <?= date("Y") ?> - Máté Jámbor - <a href="https://fullstackvoid.com/" class="link link-light" target="_blank">fullstackvoid.com</a></p>
         </footer>
         <script>
             const csrf_token = "<?= csrf_token() ?>";

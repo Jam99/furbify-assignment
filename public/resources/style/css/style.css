@@ -1,9 +1,10 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap");
 /* For Firefox */
 /* Set the width of the scrollbar */
 @supports not selector(::-webkit-scrollbar) {
   * {
-    scrollbar-color: #212529 #f8f9fa;
+    scrollbar-color: #16181b #f8f9fa;
   }
 }
 /* For webkit browsers (Chrome, Safari) */
@@ -20,13 +21,82 @@
 
 /* Set the color of the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background: #212529;
+  background: #16181b;
   border-radius: 0.25rem;
 }
 
 body {
   margin: 0 auto;
   font-family: "Nata Sans", sans-serif;
+  min-width: 300px;
+  overflow-x: hidden;
+}
+
+#main_wrap {
+  min-height: 80vh;
+}
+
+@media screen and (max-width: 575px) {
+  .rounded.ignore-rounded-below-sm {
+    border-radius: 0 !important;
+  }
+}
+
+.mw-600 {
+  max-width: 600px;
+}
+
+#form_modal_btn {
+  z-index: 999;
+  position: fixed;
+  width: 64px;
+  height: 64px;
+  right: 20px;
+  bottom: 45px;
+  background: url("/resources/img/plus.svg");
+  background-position: center;
+  background-size: cover;
+  filter: drop-shadow(0 0.15rem 0.3rem rgba(0, 0, 0, 0.25));
+  opacity: 0.95;
+  transition: 0.25s;
+}
+@media screen and (min-width: 992px) {
+  #form_modal_btn {
+    display: none;
+  }
+}
+#form_modal_btn:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+#contact_container:empty::after {
+  content: "Jelenleg nincs névjegy.";
+}
+
+.contact-container-item {
+  border-bottom: solid #16181b 2px;
+}
+.contact-container-item.disabled {
+  pointer-events: none !important;
+  opacity: 0.5;
+}
+.contact-container-item:last-of-type {
+  border-bottom: none;
+}
+
+#form_container.show-form {
+  padding-top: 100px;
+  z-index: 9999;
+  display: block !important;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#form_container.show-form .close-form-btn {
+  display: inline-block !important;
 }
 
 /*# sourceMappingURL=style.css.map */

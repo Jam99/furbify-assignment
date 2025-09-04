@@ -2,4 +2,84 @@
 body{
     margin: 0 auto;
     font-family: "Nata Sans", sans-serif;
+    min-width: 300px;
+    overflow-x: hidden;
 }
+
+#main_wrap{
+    min-height: 80vh;
+}
+
+.rounded.ignore-rounded-below-sm{
+    @media screen and (max-width: $sm-breakpoint - 1) {
+        border-radius: 0 !important;
+    }
+}
+
+.mw-600{
+    max-width: 600px;
+}
+
+#form_modal_btn{
+    @media screen and (min-width: $lg-breakpoint) {
+        display: none;
+    }
+
+    z-index: 999;
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    right: 20px;
+    bottom: 45px;
+    background: url("/resources/img/plus.svg");
+    background-position: center;
+    background-size: cover;
+    filter: drop-shadow(0 .15rem .3rem rgba(0, 0, 0, 0.25));
+    opacity: 0.95;
+    transition: .25s;
+
+    &:hover{
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+
+
+#contact_container{
+    &:empty::after{
+        content: "Jelenleg nincs névjegy."
+    }
+}
+
+
+.contact-container-item{
+    border-bottom: solid darken($dark, 5) 2px;
+
+    &.disabled{
+        pointer-events: none !important;
+        opacity: 0.5;
+    }
+
+    &:last-of-type{
+        border-bottom: none;
+    }
+}
+
+
+#form_container{
+    &.show-form{
+        padding-top: 100px;
+        z-index: 9999;
+        display: block !important;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        .close-form-btn{
+            display: inline-block !important;
+        }
+    }
+}
+

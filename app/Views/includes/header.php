@@ -10,4 +10,4 @@
     <link type="text/css" rel="stylesheet" href="/resources/style/css/style.css?v=<?= $common_data["custom_common_cfg"]->version ?>">
     <link type="text/css" rel="stylesheet" href="/resources/style/css/bootstrap.min.css">
 </head>
-<body class="site-main page-<?= $current_page ?>">
+<body class="site-main page-<?= $current_page ?> bg-dark">

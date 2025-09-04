@@ -5,4 +5,10 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Main::index');
+
+//main
+$routes->get("/", "Main::index");
+
+//ajax
+$routes->post("/ajax/create-contact", "Main::ajaxCreateContact");
+$routes->post("/ajax/del-contact", "Main::ajaxDeleteContact");
