@@ -9,5 +9,5 @@
             <li class="col-12 col-md-auto ms-2 p-2"><a class="link-light text-decoration-none" href="mailto:<?= esc($contact["email"], "attr") ?>"><?= esc($contact["email"]) ?></a></li>
         </ul>
     </div>
-    <a class="del-contact-btn px-2 py-1 fw-bold text-light text-decoration-none d-inline-block position-absolute top-0 end-0" href="#">🗙</a>
+    <a class="del-contact-btn px-2 py-1 fw-bold text-light text-decoration-none d-inline-block position-absolute top-0 end-0" href="#">×</a>
 </div>

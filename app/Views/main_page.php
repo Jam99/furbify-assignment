@@ -13,7 +13,7 @@
                 <?php endforeach ;?>
             </div>
         </div>
-        <div id="form_container" class="col-12 col-lg-6 ps-5 d-none d-lg-block bg-light">
+        <div id="form_container" class="col-12 col-lg-6 ps-lg-5 d-none d-lg-block bg-light">
             <div class="sticky-top mx-auto mw-600">
                 <h2 class="h4 mb-4 text-secondary pt-2"><?= lang("Main.add_new_contact") ?></h2>
                 <?= form_open("", ["id" => "add_contact_form", "class" => "mt-4"]) ?>
@@ -46,7 +46,7 @@
                     </div>
                 </form>
             </div>
-            <a class="close-form-btn position-fixed end-0 top-0 fs-3 p-2 text-decoration-none link-dark" href="#">🗙</a>
+            <a class="close-form-btn position-fixed end-0 top-0 fs-3 p-2 text-decoration-none link-dark" href="#">×</a>
         </div>
     </div>
 </div>
