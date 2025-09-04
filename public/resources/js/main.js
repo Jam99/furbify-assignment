@@ -20,9 +20,15 @@ $("#add_contact_form").on("real_submit", function(e){
 
         if(response.success){
             form_feedback(response.message, "success");
-            $("#form_container.show-form").removeClass("show-form");
             $form[0].reset();
             $("#contact_container").append(response.html);
+
+            if($("#form_container").is(".show-form")){
+                $("#form_container").removeClass("show-form");
+                setTimeout(function(){
+                    alert(response.message);
+                }, 50)
+            }
         }
         else {
             if (response.simple_errors) {
